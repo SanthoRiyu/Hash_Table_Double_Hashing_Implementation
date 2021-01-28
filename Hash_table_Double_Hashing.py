@@ -3,7 +3,6 @@ class HashTable(object):
     Supported Operations : Insert, Selection, remove, Cleanup, get_keys
     Hash function - Implemented with basic operations and Double hashing collision handling
     The Hash table doubles in size when the threshold load factor reaches 0.5
-    input format - 2010CSE1000 / 3.4
     """
     hash_resize_flag = False
 
@@ -145,7 +144,6 @@ class HashTable(object):
         hash_val1 = self.hash1(key)
         retrieved_value = None
         got_value = self.value_array[hash_val1]
-#         print('got_value', got_value)
         if (got_value is not None) and got_value != -1:
             if got_value[0] == key:
                 return got_value[1]
